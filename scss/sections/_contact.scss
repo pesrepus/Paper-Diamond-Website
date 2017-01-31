@@ -1,0 +1,119 @@
+// ---------------------------------------
+// Content: Contact
+// ---------------------------------------
+
+// ---------------------
+// Large, Medium & Small
+
+.co-contact {
+    .contact {
+        background-color: $light-gray;
+        
+        .columns {
+            padding: 0;
+        }
+        
+        .mail-address {
+            color: #1a1a1a;
+            font-weight: bold;
+            line-height: rem-calc(100);
+            padding: rem-calc(0 30);
+            font-size: rem-calc(26);
+            text-align: left;
+        }
+        
+        .mail-link {
+            display: block;
+            color: #fff;
+            background-color: #1a1a1a;
+            font-weight: bold;
+            line-height: rem-calc(100);
+            font-size: rem-calc(20);
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                background-color: rgba(255,255,255,0.1);
+                transition: width 0.35s cubic-bezier(0.75, 0, 0.125, 1);
+            }
+            
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                background-color: rgba(255,255,255,0.1);
+                transition: width 0.35s cubic-bezier(0.75, 0, 0.125, 1);
+            }
+            
+            i {
+                margin-left: rem-calc(20);
+            }
+            
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+                
+                &:after {
+                    transition-delay: 0.15s;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// --------------
+// Medium & Small
+
+@include breakpoint(medium down) {
+    .co-contact {
+        .contact {
+            .mail-address {
+                font-size: rem-calc(20);
+                line-height: rem-calc(90);
+            }
+            
+            .mail-link {
+                font-size: rem-calc(20);
+                line-height: rem-calc(90);
+            }
+        }
+    }
+}
+
+// ----------
+// Small Only
+
+@include breakpoint(small only) {
+    .co-contact {
+        .contact {
+            margin: 0 (map-get($grid-column-gutter, small) / 2);
+            
+            .mail-address {
+                font-size: rem-calc(18);
+                line-height: 1;
+                margin: rem-calc(30 0);
+                text-align: center;
+            }
+            
+            .mail-link {
+                font-size: rem-calc(16);
+                line-height: rem-calc(70);
+            }
+        }
+    }
+}

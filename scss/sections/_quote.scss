@@ -1,0 +1,38 @@
+// ---------------------------------------
+// Content: Quote
+// ---------------------------------------
+
+// ---------------------
+// Large, Medium & Small
+
+.co-quote {
+    text-align: center;
+    
+    .quote {
+        font-size: rem-calc(30);
+        font-weight: lighter;
+        font-style: italic;
+        padding-bottom: rem-calc(30);
+        margin-bottom: rem-calc(30);
+        position: relative;
+        color: #888;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: rem-calc(30);
+            height: 1px;
+            margin-left: rem-calc(-15);
+            background-color: #aaa;
+        }
+    }
+    
+    .author {
+        color: $dark-gray;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: rem-calc(14);
+    }
+}

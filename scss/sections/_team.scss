@@ -1,0 +1,108 @@
+// ---------------------------------------
+// Content: Team
+// ---------------------------------------
+
+// ---------------------
+// Large, Medium & Small
+
+.co-team {
+    .team {
+        .columns {
+            padding: 0;
+            
+            img {
+                width: 100%;
+                margin: rem-calc(0 0 20 0);
+                padding: 0;
+            }
+
+            .name {
+                margin: 0;
+                padding: 0;
+                height: rem-calc(70);
+                line-height: rem-calc(70);
+                text-align: center;
+                color: #151515;
+                font-size: rem-calc(26);
+                position: relative;
+                
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: rem-calc(-15);
+                    width: rem-calc(30);
+                    height: 1px;
+                    background-color: #ccc;
+                }
+            }
+
+            .location {
+                margin: 0;
+                padding: 0;
+                height: rem-calc(65);
+                line-height: rem-calc(65);
+                text-align: center;
+                text-transform: uppercase;
+                font-size: rem-calc(12);
+                letter-spacing: rem-calc(1.5);
+                word-spacing: rem-calc(8);
+            }
+        }
+    }
+}
+
+// --------------
+// Medium & Small
+
+@include breakpoint(medium down) {
+    .co-team {
+        .team {
+            padding: 0;
+
+            .columns {
+                img {
+                    
+                }
+
+                .name {
+                    
+                }
+
+                .location {
+                    
+                }
+            }
+        }
+    }
+}
+
+// ----------
+// Small Only
+
+@include breakpoint(small only) {
+    .co-team {
+        .team {
+            .columns {
+                margin-bottom: rem-calc(50);
+                
+                img {
+                    
+                }
+
+                .name {
+                    
+                }
+
+                .location {
+                    
+                }
+                
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

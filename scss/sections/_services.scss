@@ -1,0 +1,99 @@
+// ---------------------------------------
+// Content: Services
+// ---------------------------------------
+
+// ---------------------
+// Large, Medium & Small
+
+.co-services {
+    .items {
+        .columns {
+            img {
+                width: rem-calc(100);
+                display: block;
+                margin: 0 auto;
+            }
+            
+            h4 {
+                text-align: center;
+                margin: rem-calc(20) 0;
+            }
+            
+            p {
+                text-align: justify;
+                font-size: rem-calc(14);
+                margin: 0;
+            }
+            
+            &:first-child {
+                border-right: 1px solid #eee;
+            }
+            
+            &:last-child {
+                border-left: 1px solid #eee;
+            }
+        }
+    }
+}
+
+// --------------
+// Medium & Small
+
+@include breakpoint(medium down) {
+    .co-services {
+        .items {
+            .columns {
+                img {
+                    width: rem-calc(80);
+                }
+
+                h4 {
+                    margin: rem-calc(15) 0;
+                }
+
+                p {
+                    
+                }
+            }
+        }
+    }
+}
+
+// ----------
+// Small Only
+
+@include breakpoint(small only) {
+    .co-services {
+        .items {
+            .columns {
+                margin-bottom: rem-calc(50);
+                
+                img {
+                    display: inline-block;
+                    margin: 0 rem-calc(20) 0 0;
+                    padding: rem-calc(10);
+                    background-color: #eee;
+                    border-radius: 50%;
+                }
+
+                h4 {
+                    display: inline-block;
+                }
+
+                p {
+                    margin-top: rem-calc(10);
+                    font-size: 1rem;
+                }
+                
+                &:first-child {
+                    border: none;
+                }
+
+                &:last-child {
+                    border: none;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

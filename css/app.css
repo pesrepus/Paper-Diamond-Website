@@ -4803,6 +4803,11 @@ table.hover tr:nth-of-type(even):hover {
 .co-services .items .columns:last-child {
   border-left: 1px solid #eee; }
 
+.co-services .services-emphasis {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: .5px; }
+
 @media screen and (max-width: 61.9375em) {
   .co-services .items .columns img {
     width: 5rem; }

@@ -100,7 +100,7 @@ footer {
                 right: 0;
                 width: 100%;
                 height: 1px;
-                background: #222;
+                background: #1e1e1e;
             }
             
             &:after {
@@ -195,7 +195,7 @@ footer {
                         li {
                             display: block;
                             margin: rem-calc(0 30);
-                            border-bottom: 1px solid #222;
+                            border-bottom: 1px solid #1e1e1e;
                             
                             a {
                                 font-size: rem-calc(12);

@@ -34,8 +34,9 @@
             }
         }
     }
-    .services-emphasis {
-        font-size: 15px;
+    
+    .emphasis {
+        font-size: rem-calc(15);
         text-transform: uppercase;
         letter-spacing: .5px;
     }

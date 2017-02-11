@@ -14,7 +14,7 @@
         }
         
         .mail-address {
-            color: #1a1a1a;
+            color: #333;
             font-weight: bold;
             line-height: rem-calc(100);
             padding: rem-calc(0 30);
@@ -42,7 +42,7 @@
                 bottom: 0;
                 left: 0;
                 width: 0;
-                background-color: rgba(255,255,255,0.1);
+                background-color: rgba(255,255,255,0.05);
                 transition: width 0.35s cubic-bezier(0.75, 0, 0.125, 1);
             }
             
@@ -54,7 +54,7 @@
                 bottom: 0;
                 left: 0;
                 width: 0;
-                background-color: rgba(255,255,255,0.1);
+                background-color: rgba(255,255,255,0.05);
                 transition: width 0.35s cubic-bezier(0.75, 0, 0.125, 1);
             }
             

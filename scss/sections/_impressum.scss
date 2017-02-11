@@ -1,0 +1,50 @@
+// ---------------------------------------
+// Impressum
+// ---------------------------------------
+
+.impressum {
+    text-align: left;
+    
+    p {
+        color: #777777;
+    }
+    
+    a {
+        color: #000000;
+        transition: color 0.15s ease;
+        
+        &:hover {
+            color: #333333;
+        }
+    }
+    
+    .impressum-section {
+        margin-bottom: rem-calc(50);
+        
+        i {
+            color: $dark-gray;
+            display: inline-block;
+            width: rem-calc(20);
+            text-align: center;
+            margin-right: rem-calc(10);
+        }
+        
+        .toggle {
+            cursor: pointer;
+            transition: color 0.15s ease;
+
+            &:hover {
+                color: #333333;
+            }
+        }
+        
+        .toggle i {
+            font-size: rem-calc(14);
+            transform: translateY(-5px);
+        }
+        
+        h6 {
+            margin-top: rem-calc(30);
+        }
+    }
+}

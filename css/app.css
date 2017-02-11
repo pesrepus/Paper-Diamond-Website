@@ -1430,7 +1430,7 @@ h6 {
   font-family: "Lovelo", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #1a1a1a;
+  color: #333333;
   text-rendering: optimizeLegibility;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -4735,7 +4735,7 @@ table.hover tr:nth-of-type(even):hover {
       display: none; }
     .landing .top-bar .quicklinks ul {
       text-align: center;
-      border-bottom: 1px solid #222; }
+      border-bottom: 1px solid #1e1e1e; }
       .landing .top-bar .quicklinks ul li {
         padding: 0; }
         .landing .top-bar .quicklinks ul li a {
@@ -4803,8 +4803,8 @@ table.hover tr:nth-of-type(even):hover {
 .co-services .items .columns:last-child {
   border-left: 1px solid #eee; }
 
-.co-services .services-emphasis {
-  font-size: 15px;
+.co-services .emphasis {
+  font-size: 0.9375rem;
   text-transform: uppercase;
   letter-spacing: .5px; }
 
@@ -4846,7 +4846,7 @@ table.hover tr:nth-of-type(even):hover {
     height: 4.375rem;
     line-height: 4.375rem;
     text-align: center;
-    color: #151515;
+    color: #555;
     font-size: 1.625rem;
     position: relative; }
     .co-team .team .columns .name:after {
@@ -4884,7 +4884,7 @@ table.hover tr:nth-of-type(even):hover {
   .co-contact .contact .columns {
     padding: 0; }
   .co-contact .contact .mail-address {
-    color: #1a1a1a;
+    color: #333;
     font-weight: bold;
     line-height: 6.25rem;
     padding: 0 1.875rem;
@@ -4909,7 +4909,7 @@ table.hover tr:nth-of-type(even):hover {
       bottom: 0;
       left: 0;
       width: 0;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.05);
       -webkit-transition: width 0.35s cubic-bezier(0.75, 0, 0.125, 1);
       transition: width 0.35s cubic-bezier(0.75, 0, 0.125, 1); }
     .co-contact .contact .mail-link:after {
@@ -4920,7 +4920,7 @@ table.hover tr:nth-of-type(even):hover {
       bottom: 0;
       left: 0;
       width: 0;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.05);
       -webkit-transition: width 0.35s cubic-bezier(0.75, 0, 0.125, 1);
       transition: width 0.35s cubic-bezier(0.75, 0, 0.125, 1); }
     .co-contact .contact .mail-link i {
@@ -5020,7 +5020,7 @@ footer .footer-info {
       right: 0;
       width: 100%;
       height: 1px;
-      background: #222; }
+      background: #1e1e1e; }
     footer .footer-info .last-line:after {
       content: '';
       display: block;
@@ -5069,7 +5069,7 @@ footer .footer-info {
   footer .footer-info .navigation nav ul li {
     display: block;
     margin: 0 1.875rem;
-    border-bottom: 1px solid #222; }
+    border-bottom: 1px solid #1e1e1e; }
     footer .footer-info .navigation nav ul li a {
       font-size: 0.75rem;
       display: block; }
@@ -5093,6 +5093,37 @@ footer .footer-info {
       footer .footer-info .last-line .right a {
         display: block;
         padding: 0.625rem; } }
+
+.impressum {
+  text-align: left; }
+  .impressum p {
+    color: #777777; }
+  .impressum a {
+    color: #000000;
+    -webkit-transition: color 0.15s ease;
+    transition: color 0.15s ease; }
+    .impressum a:hover {
+      color: #333333; }
+  .impressum .impressum-section {
+    margin-bottom: 3.125rem; }
+    .impressum .impressum-section i {
+      color: #333333;
+      display: inline-block;
+      width: 1.25rem;
+      text-align: center;
+      margin-right: 0.625rem; }
+    .impressum .impressum-section .toggle {
+      cursor: pointer;
+      -webkit-transition: color 0.15s ease;
+      transition: color 0.15s ease; }
+      .impressum .impressum-section .toggle:hover {
+        color: #333333; }
+    .impressum .impressum-section .toggle i {
+      font-size: 0.875rem;
+      -webkit-transform: translateY(-5px);
+              transform: translateY(-5px); }
+    .impressum .impressum-section h6 {
+      margin-top: 1.875rem; }
 
 @media screen and (min-width: 48em) {
   .row {

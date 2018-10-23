@@ -6,262 +6,282 @@
 // Large, Medium & Small
 
 .landing {
-    background-color: #151515;
-    height: 100vh;
-    min-height: rem-calc(650);
-    background-image: url(../img/bg-overlay.svg);
-    background-size: cover;
-    background-position: left;
-    padding: rem-calc(50);
-    position: relative;
-    // prevent whole site from jumping
-    // on android chrome: vh is jumping -> addressbar hiding and showing
-    transition: height 0.2s ease;
-    
-    .top-bar {
-        .locations {
-            color: $medium-gray;
-            text-transform: uppercase;
-            letter-spacing: rem-calc(2);
-            font-size: rem-calc(14);
-            line-height: rem-calc(40);
-            padding: rem-calc(0 20);
+	background-color: #151515;
+	height: 100vh;
+	min-height: rem-calc(650);
+	background-image: url("../img/bg-overlay.svg");
+	background-size: cover;
+	background-position: left;
+	padding: rem-calc(50);
+	position: relative;
+	// prevent whole site from jumping
+	// on android chrome: vh is jumping -> addressbar hiding and showing
+	transition: height 0.2s ease;
 
-            span {
-                padding: rem-calc(0 20);
-            }
-        }
+	.top-bar {
+		.locations {
+			color: $medium-gray;
+			text-transform: uppercase;
+			letter-spacing: rem-calc(2);
+			font-size: rem-calc(14);
+			line-height: rem-calc(40);
+			padding: rem-calc(0 20);
 
-        .quicklinks {
-            ul {
-                list-style: none;
-                margin: 0;
+			span {
+				padding: rem-calc(0 20);
+			}
+		}
 
-                li {
-                    display: inline-block;
-                    padding: rem-calc(0 20);
+		.quicklinks {
+			ul {
+				list-style: none;
+				margin: 0;
 
-                    a {
-                        display: inline-block;
-                        color: $medium-gray;
-                        text-transform: uppercase;
-                        letter-spacing: rem-calc(2);
-                        font-size: rem-calc(14);
-                        padding: rem-calc(0 20);
-                        line-height: rem-calc(40);
-                        height: rem-calc(40);
-                        transition: all 0.2s ease;
-                        
-                        &:hover {
-                            color: #fff;
-                            background-color: rgba(255,255,255,0.05);
-                        }
-                    }
-                    
-                    &:last-child {
-                        padding: rem-calc(0 0 0 20);
-                    }
-                }
-            }
-        }
-    }
-    
-    .intro {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        // offset content upwards to compensate the menu height
-        padding-bottom: rem-calc(80);
-        
-        .intro-container {
-            img {
-                height: rem-calc(200);
-                display: block;
-                margin: 0 auto;
-            }
+				li {
+					display: inline-block;
+					padding: rem-calc(0 20);
 
-            h1 {
-                color: #fff;
-                font-size: rem-calc(46);
-                line-height: 1;
-                letter-spacing: rem-calc(2);
-                text-align: center;
-                margin: rem-calc(0);
-                padding: rem-calc(45 0 50 0);
-                position: relative;
+					a {
+						position: relative;
+						display: inline-block;
+						color: $medium-gray;
+						text-transform: uppercase;
+						letter-spacing: rem-calc(2);
+						font-size: rem-calc(14);
+						padding: rem-calc(0 20);
+						line-height: rem-calc(40);
+						height: rem-calc(40);
+						transition: color 0.2s ease;
 
-                &:after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    margin-left: rem-calc(-20);
-                    width: rem-calc(40);
-                    height: rem-calc(5);
-                    background: #fff;
-                }
-            }
+						&::after {
+							content: '';
+							display: block;
+							position: absolute;
+							bottom: 0;
+							left: rem-calc(20);
+							height: rem-calc(2);
+							width: 0;
+							background: $primary-color;
+							transition: width 0.2s ease;
+						}
 
-            p {
-                color: $medium-gray;
-                text-align: center;
-                margin: rem-calc(50 0 0 0);
+						&:hover {
+							color: $primary-color;
 
-                span {
-                    padding: rem-calc(0 10);
-                }
-            }
-        }
-    }
-    
-    .quickdown {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        margin-left: rem-calc(-30);
-        
-        a {
-            display: block;
-            width: rem-calc(60);
-            height: rem-calc(60);
-            line-height: rem-calc(60);
-            text-align: center;
-            color: $medium-gray;
-            transition: color 0.2s ease;
-            
-            &:hover {
-                color: #fff;
-            }
-        }
-    }
+							&::after {
+								width: rem-calc(30);
+							}
+						}
+					}
+
+					&:last-child {
+						padding: rem-calc(0 0 0 20);
+					}
+				}
+			}
+		}
+	}
+
+	.intro {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		// offset content upwards to compensate the menu height
+		padding-bottom: rem-calc(80);
+
+		.intro-container {
+			img {
+				height: rem-calc(200);
+				display: block;
+				margin: 0 auto;
+			}
+
+			h1 {
+				color: #fff;
+				font-size: rem-calc(46);
+				line-height: 1;
+				letter-spacing: rem-calc(2);
+				text-align: center;
+				margin: rem-calc(0);
+				padding: rem-calc(45 0 50 0);
+				position: relative;
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					margin-left: rem-calc(-20);
+					width: rem-calc(40);
+					height: rem-calc(5);
+					background: #fff;
+				}
+			}
+
+			p {
+				color: $medium-gray;
+				text-align: center;
+				margin: rem-calc(50 0 0 0);
+
+				span {
+					padding: rem-calc(0 10);
+				}
+			}
+		}
+	}
+
+	.quickdown {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: rem-calc(-30);
+
+		a {
+			display: block;
+			width: rem-calc(60);
+			height: rem-calc(60);
+			line-height: rem-calc(60);
+			text-align: center;
+			color: $medium-gray;
+			transition: color 0.2s ease;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
 }
 
 // --------------
 // Medium & Small
 
 @include breakpoint(medium down) {
-    .landing {
-        padding: rem-calc(30);
+	.landing {
+		padding: rem-calc(30);
 
-        .top-bar {
-            .locations {
-                padding: rem-calc(0 15);
+		.top-bar {
+			.locations {
+				padding: rem-calc(0 15);
 
-                span {
-                    padding: rem-calc(0 15);
-                }
-            }
+				span {
+					padding: rem-calc(0 15);
+				}
+			}
 
-            .quicklinks {
-                ul {
-                    li {
-                        padding: rem-calc(0 5);
+			.quicklinks {
+				ul {
+					li {
+						padding: rem-calc(0 5);
 
-                        a {
-                            padding: rem-calc(0 15);
-                        }
-                        
-                        &:last-child {
-                            padding: rem-calc(0 0 0 5);
-                        }
-                    }
-                }
-            }
-        }
+						a {
+							padding: rem-calc(0 15);
 
-        .intro {
-            // offset content upwards to compensate the menu height
-            padding-bottom: rem-calc(60);
-            
-            .intro-container {
-                img {
-                    height: rem-calc(160);
-                }
+							&::after {
+								left: rem-calc(15);
+							}
+						}
 
-                h1 {
-                    font-size: rem-calc(36);
-                    padding: rem-calc(35 0 40 0);
+						&:last-child {
+							padding: rem-calc(0 0 0 5);
+						}
+					}
+				}
+			}
+		}
 
-                    &:after {
-                        margin-left: rem-calc(-15);
-                        width: rem-calc(30);
-                    }
-                }
+		.intro {
+			// offset content upwards to compensate the menu height
+			padding-bottom: rem-calc(60);
 
-                p {
-                    margin: rem-calc(40 0 0 0);
+			.intro-container {
+				img {
+					height: rem-calc(160);
+				}
 
-                    span {
-                        padding: rem-calc(0 5);
-                    }
-                }
-            }
-        }
-    }
+				h1 {
+					font-size: rem-calc(36);
+					padding: rem-calc(35 0 40 0);
+
+					&:after {
+						margin-left: rem-calc(-15);
+						width: rem-calc(30);
+					}
+				}
+
+				p {
+					margin: rem-calc(40 0 0 0);
+
+					span {
+						padding: rem-calc(0 5);
+					}
+				}
+			}
+		}
+	}
 }
 
 // ----------
 // Small Only
 
 @include breakpoint(small only) {
-    .landing {
-        height: auto;
-        min-height: auto;
-        
-        .top-bar {
-            .locations {
-                display: none;
-            }
+	.landing {
+		height: auto;
+		min-height: auto;
 
-            .quicklinks {
-                ul {
-                    text-align: center;
-                    border-bottom: 1px solid #1e1e1e;
-                    
-                    li {
-                        padding: 0;
+		.top-bar {
+			.locations {
+				display: none;
+			}
 
-                        a {
-                            font-size: rem-calc(12);
-                        }
-                        
-                        &:last-child {
-                            padding: 0;
-                        }
-                    }
-                }
-            }
-        }
+			.quicklinks {
+				ul {
+					text-align: center;
+					border-bottom: 1px solid #1e1e1e;
 
-        .intro {
-            padding: rem-calc(100 0);
-            
-            .intro-container {
-                img {
-                    height: rem-calc(120);
-                }
+					li {
+						padding: 0;
 
-                h1 {
-                    font-size: rem-calc(28);
-                    padding: rem-calc(30 0 35 0);
+						a {
+							font-size: rem-calc(12);
+						}
 
-                    &:after {
-                        margin-left: rem-calc(-15);
-                        width: rem-calc(30);
-                    }
-                }
+						&:last-child {
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
 
-                p {
-                    font-size: rem-calc(13);
-                    margin: rem-calc(35 0 0 0);
+		.intro {
+			padding: rem-calc(100 0);
 
-                    span {
-                        padding: rem-calc(0 5);
-                    }
-                }
-            }
-        }
-    }
+			.intro-container {
+				img {
+					height: rem-calc(120);
+				}
+
+				h1 {
+					font-size: rem-calc(28);
+					padding: rem-calc(30 0 35 0);
+
+					&:after {
+						margin-left: rem-calc(-15);
+						width: rem-calc(30);
+					}
+				}
+
+				p {
+					font-size: rem-calc(13);
+					margin: rem-calc(35 0 0 0);
+
+					span {
+						padding: rem-calc(0 5);
+					}
+				}
+			}
+		}
+	}
 }

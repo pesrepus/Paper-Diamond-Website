@@ -1,17 +1,13 @@
 {
-  "name": "foundation-sites-template",
-  "version": "1.0.0",
-  "authors": [
-    "ZURB <foundation@zurb.com>"
-  ],
-  "description": "Basic template for a new Foundation for Sites project.",
+  "name": "paper-diamond-website",
+  "description": "Corporate Website for Paper Diamond",
   "main": "index.html",
+  "authors": [
+    "Paper Diamond <office@paper-diamond.at>"
+  ],
   "license": "MIT",
-  "homepage": "http://foundation.zurb.com",
-  "dependencies": {
-    "foundation-sites": "~6.2.0",
-    "motion-ui": "~1.2.2",
-  },
+  "homepage": "https://github.com/pesrepus/Paper-Diamond-Website",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -19,5 +15,7 @@
     "test",
     "tests"
   ],
-  "private": true
+  "dependencies": {
+    "foundation-sites": "^6.4.3"
+  }
 }

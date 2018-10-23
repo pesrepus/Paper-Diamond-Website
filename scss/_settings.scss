@@ -64,7 +64,7 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 2;
 $foundation-palette: (
-  primary: #2199e8,
+  primary: #899e40,
   secondary: #777,
   success: #3adb76,
   warning: #ffae00,
@@ -76,7 +76,7 @@ $dark-gray: #333333;
 $black: #000000;
 $white: #ffffff;
 $body-background: #fff;
-$body-font-color: $medium-gray;
+$body-font-color: #777;
 $body-font-family: 'Source Sans Pro', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -121,22 +121,22 @@ $header-font-family: 'Lovelo', sans-serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-sizes: (
+$header-styles: (
   small: (
-    'h1': 28,
-    'h2': 22,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
+    'h1': ('font-size': 28),
+    'h2': ('font-size': 22),
+    'h3': ('font-size': 19),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
+    'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': 48,
-    'h2': 40,
-    'h3': 31,
-    'h4': 25,
-    'h5': 20,
-    'h6': 16,
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 40),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 25),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
   ),
 );
 $header-color: $dark-gray;

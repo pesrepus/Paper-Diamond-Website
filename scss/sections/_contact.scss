@@ -7,12 +7,12 @@
 
 .co-contact {
     .contact {
-        background-color: $light-gray;
-        
+        background-color: #fff;
+
         .columns {
             padding: 0;
         }
-        
+
         .mail-address {
             color: #333;
             font-weight: bold;
@@ -21,56 +21,57 @@
             font-size: rem-calc(26);
             text-align: left;
         }
-        
+
         .mail-link {
             display: block;
-            color: #fff;
             background-color: #1a1a1a;
-            font-weight: bold;
+				font-weight: bold;
             line-height: rem-calc(100);
             font-size: rem-calc(20);
             text-align: center;
             text-transform: uppercase;
             position: relative;
             overflow: hidden;
-            
+
+				span {
+					color: $medium-gray;
+					position: relative;
+					z-index: 100;
+					margin: 0;
+					transition: margin 0.35s cubic-bezier(0.75, 0, 0.125, 1), color 0.35s cubic-bezier(0.75, 0, 0.125, 1);
+
+					i {
+	                margin-left: rem-calc(20);
+						 transition: margin 0.35s cubic-bezier(0.75, 0, 0.125, 1);
+	            }
+				}
+
             &:before {
                 content: '';
                 display: block;
                 position: absolute;
+					 z-index: 50;
                 top: 0;
                 bottom: 0;
                 left: 0;
                 width: 0;
-                background-color: rgba(255,255,255,0.05);
+                background-color: rgba(255,255,255,0.08);
                 transition: width 0.35s cubic-bezier(0.75, 0, 0.125, 1);
             }
-            
-            &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                background-color: rgba(255,255,255,0.05);
-                transition: width 0.35s cubic-bezier(0.75, 0, 0.125, 1);
-            }
-            
-            i {
-                margin-left: rem-calc(20);
-            }
-            
+
             &:hover {
-                &:before {
-                    width: 100%;
-                }
-                
-                &:after {
-                    transition-delay: 0.15s;
-                    width: 100%;
-                }
+					span {
+						margin-left: rem-calc(35);
+						color: #fff;
+
+						i {
+							margin-left: rem-calc(30);
+						}
+					}
+
+					&:before {
+						width: 100%;
+					}
             }
         }
     }
@@ -83,13 +84,23 @@
     .co-contact {
         .contact {
             .mail-address {
-                font-size: rem-calc(20);
+                font-size: rem-calc(18);
                 line-height: rem-calc(90);
             }
-            
+
             .mail-link {
-                font-size: rem-calc(20);
+                font-size: rem-calc(18);
                 line-height: rem-calc(90);
+
+					 &:hover {
+						 span {
+							 margin-left: rem-calc(20);
+
+							 i {
+								 margin-left: rem-calc(28);
+							 }
+						 }
+	             }
             }
         }
     }
@@ -102,14 +113,14 @@
     .co-contact {
         .contact {
             margin: 0 (map-get($grid-column-gutter, small) / 2);
-            
+
             .mail-address {
                 font-size: rem-calc(18);
                 line-height: 1;
                 margin: rem-calc(30 0);
                 text-align: center;
             }
-            
+
             .mail-link {
                 font-size: rem-calc(16);
                 line-height: rem-calc(70);

@@ -11,22 +11,34 @@ $browser-context: 16;
 
 // make the grid jumping the queries for better styling
 
+$max-w-medium: em-calc(720);
+$max-w-large: em-calc(940);
+$max-w-xlarge: em-calc(1140);
+
 @include breakpoint(medium) {
     .row {
-        max-width: em-calc(720);
+        max-width: $max-w-medium;
     }
 }
 
 @include breakpoint(large) {
     .row {
-        max-width: em-calc(940);
+        max-width: $max-w-large;
     }
 }
 
 @include breakpoint(xlarge) {
     .row {
-        max-width: em-calc(1140);
+        max-width: $max-w-xlarge;
     }
+}
+
+::-moz-selection {
+	background: rgba(#c9ff0f, 0.5);
+}
+
+::selection {
+	background: rgba(#c9ff0f, 0.5);
 }
 
 // ---------------------------------------
@@ -36,13 +48,18 @@ $browser-context: 16;
 // ---------------------
 // Large, Medium & Small
 
+a {
+	color: $dark-gray;
+	transition: color 0.2s ease;
+
+	&:hover {
+		color: $primary-color;
+	}
+}
+
 .co,
 .co-bg {
     padding: rem-calc(150 0);
-}
-
-.co-bg {
-    background-color: $light-gray;
 }
 
 .title {
@@ -51,14 +68,14 @@ $browser-context: 16;
     max-width: rem-calc(800);
     margin: 0 auto;
     padding-bottom: rem-calc(120);
-    
+
     h1 {
         position: relative;
         z-index: 20;
         height: rem-calc(160);
         line-height: rem-calc(160);
     }
-    
+
     .number {
         position: absolute;
         z-index: 10;
@@ -71,13 +88,23 @@ $browser-context: 16;
         height: rem-calc(160);
         line-height: rem-calc(160);
     }
-    
+
     p {
         margin: 0;
         padding: 0;
         margin-top: rem-calc(20);
         line-height: 2;
     }
+}
+
+.co-bg {
+    background-color: $light-gray;
+
+	 .title {
+		 .number {
+			 color: #e4e4e4;
+		 }
+	 }
 }
 
 // --------------
@@ -88,6 +115,10 @@ $browser-context: 16;
     .co-bg {
         padding: rem-calc(100 0);
     }
+
+	 .title {
+        padding-bottom: rem-calc(100);
+	  }
 }
 
 // ----------
@@ -98,10 +129,10 @@ $browser-context: 16;
     .co-bg {
         padding: rem-calc(80 0);
     }
-    
+
     .title {
         padding-bottom: rem-calc(80);
-        
+
         h1 {
             height: rem-calc(130);
             line-height: rem-calc(130);
